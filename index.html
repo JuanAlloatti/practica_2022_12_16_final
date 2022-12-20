@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/datos.js"></script>
+    <title>Tareas</title>
+</head>
+<body>
+    <main>
+        <header class="registerForm">
+            <div class="newTaskHeader">
+                AGREGAR NUEVA TAREA
+            </div>
+            <div class="inputsNewTask">
+                <label class="form-label" for="titulo"></label>
+                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Agrega una nueva tarea">
+
+                <select name="prioridad" id="prioridad">
+                    <option disabled selected>Selecciona su prioridad</option>
+                    <option value="urgente">Urgente</option>
+                    <option value="diaria">Diaria</option>
+                    <option value="mensual">Mensual</option>
+                </select>
+            
+                <button id="buttonNewTask" class="buttonNewTask" type="submit" onclick=getDataForm()>Crear nueva tarea</button> 
+            </div> 
+        </header>
+
+        <div class="taskCreated hide">
+            <div class="taskCreatedText">Tarea creada con éxito!</div>
+        </div>
+        
+        <div class="filterField">
+            <div class="filterHeader">
+                FILTRAR LISTADO DE TAREAS
+            </div>
+            <div class="filterInputs">
+                <div class="filterDiv">
+                    <select class="mb-2 bg-light priorityFilter" id="selectPriority" onchange="getPriorities()">
+                        <option>Elije una prioridad</option>
+                    </select>
+
+                    <input class="wordFilter" type="text" id="keyWord" placeholder="Busca una palabra clave">
+                </div>
+            </div>
+        </div>
+
+        <section class="sectionTasks">
+        </section>
+
+        <footer>
+            <p>THE ULTIMATE TO DO LIST</p>
+        </footer>
+
+    </main>
+
+
+<script src="./js/main_practica.js"></script>
+</body>
+</html>
